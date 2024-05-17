@@ -1,0 +1,122 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:AvaloniaApplication2.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:views="clr-namespace:AvaloniaApplication2.Views"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="AvaloniaApplication2.Views.MainWindow"
+        Title="Lorem Ipsum"
+	    Width="1200"
+		Height="800"
+		CanResize="False">
+
+	<Window.Styles>
+		<Style Selector="TextBlock">
+			<Setter Property="Margin" Value="0,10,20,10"></Setter>
+			<Setter Property="Padding" Value="5,0"></Setter>
+			<Setter Property="FontSize" Value="15"></Setter>
+			<Setter Property="FontWeight" Value="Medium"></Setter>
+		</Style>
+		
+		<Style Selector="StackPanel">
+			<Setter Property="Margin" Value="10"></Setter>
+		</Style>
+	</Window.Styles>
+	
+	<Window.Resources>
+		<ResourceDictionary>
+			<Color x:Key="WhiteColor">#FFFFFF</Color>
+			<Color x:Key="LightCyan">#E0FFFF</Color>
+			<Color x:Key="AliceBlue">#F0F8FF</Color>
+			<Color x:Key="Silver">#C0C0C0</Color>
+			<Color x:Key="LightSlateGray">#778899</Color>
+			<Color x:Key="Cornsilk">#BFFF8DC</Color>
+			<Color x:Key="RosyBrown">#BC8F8F</Color>
+			<Color x:Key="Lavender">#E6E6FA</Color>
+			<Color x:Key="LightYellow">#FFFFE0</Color>
+		</ResourceDictionary>
+	</Window.Resources>
+
+	<Grid ShowGridLines="False"
+		  RowDefinitions="auto,*,auto"
+		  ColumnDefinitions="950,310"
+		  Background="{StaticResource WhiteColor}">
+
+		<DockPanel Grid.Row="0"
+				   Grid.ColumnSpan="5"
+				   Background="{StaticResource LightCya}">
+
+			<TextBlock Foreground="{StaticResource Cornsilk}">Home</TextBlock>
+			<TextBlock Foreground="{StaticResource WhiteColor}">About</TextBlock>
+			<TextBlock Foreground="{StaticResource WhiteColor}">Blogs's Main Topic 1</TextBlock>
+			<TextBlock Foreground="{StaticResource WhiteColor}">Blogs's Main Topic 2</TextBlock>
+			<TextBlock Foreground="{StaticResource WhiteColor}">Blogs's Main Topic 3</TextBlock>
+			<TextBlock Foreground="{StaticResource WhiteColor}">Associated blogs</TextBlock>
+			<TextBlock Foreground="{StaticResource Silver}"
+					   Margin="0,10,40,10"
+					   DockPanel.Dock="Right"
+					   TextAlignment="Right">RSS</TextBlock>
+		</DockPanel>
+
+		<StackPanel Orientation="Vertical"
+					Grid.Column="0"
+					Grid.Row="1">
+
+			<TextBlock TextAlignment="Left" Margin="0, 0, 0, 15">Article 1</TextBlock>
+			<TextBlock TextWrapping="Wrap">
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam dignissim justo sit amet sem interdum, id vulputate leo pretium. Aenean facilisis augue eget hendrerit tempus. Maecenas facilisis sagittis dictum. Etiam pharetra nibh sem, eget iaculis lorem euismod eget. Nam auctor tincidunt mi faucibus rutrum. Suspendisse lacinia ex a urna dignissim dignissim. Curabitur non augue semper, pretium dui vitae, lacinia quam. Maecenas non nunc vel neque lacinia tristique vel ac enim. Quisque erat nisi, tempor at justo vitae, fringilla eleifend massa. Ut ut arcu sed ipsum euismod dictum. Sed quam nunc, suscipit a ex ac, dapibus laoreet justo. Praesent ut tincidunt risus. Donec vestibulum purus sit amet lacus malesuada, suscipit semper dolor volutpat. Vivamus eget vulputate nisl.
+				Nunc sollicitudin ut enim non tincidunt. Sed sit amet magna eu arcu tincidunt mattis ac at nibh. Aliquam fermentum mauris pharetra lectus volutpat sagittis. Vestibulum quis neque mollis, egestas metus non, lacinia risus. Vestibulum ullamcorper libero in orci elementum, at hendrerit arcu pharetra. Vestibulum ornare porttitor porta. Sed pharetra congue purus. Nunc consectetur vel libero at tincidunt. Phasellus accumsan sagittis erat vitae bibendum.
+				Etiam ac urna consequat, aliquet metus at, maximus lacus. Nulla ultricies id tortor non posuere. Duis iaculis risus sit amet nunc volutpat, non sollicitudin leo facilisis. Mauris in nisl a lorem posuere sagittis. Integer purus ipsum, convallis eget leo vel, facilisis ornare velit. Donec eget suscipit justo. Morbi porta risus risus, interdum convallis massa iaculis nec. Nunc eleifend erat a euismod egestas. Nam a suscipit orci. Interdum et malesuada fames ac ante ipsum primis in faucibus. Maecenas tempor felis maximus dolor consectetur mollis. Pellentesque pharetra, nisi faucibus maximus sollicitudin, orci turpis posuere justo, vel pharetra felis est in metus. Nunc at lacinia massa. Pellentesque lobortis porttitor nunc, vitae interdum metus sollicitudin at.
+			</TextBlock>
+			<Image Height="320" Width="280" Source="/Assets/scale_1200.png"></Image>
+		</StackPanel>
+
+		<StackPanel Orientation="Vertical"
+					Grid.Column="1"
+					Grid.Row="1">
+
+			<TextBlock TextWrapping="Wrap" Margin="0, 42, 0, 0">
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam dignissim justo sit amet sem interdum, id vulputate leo pretium. Aenean facilisis augue eget hendrerit tempus. Maecenas facilisis sagittis dictum. Etiam pharetra nibh sem, eget iaculis lorem euismod eget. Nam auctor tincidunt mi faucibus rutrum. Suspendisse lacinia ex a urna dignissim dignissim. Curabitur non augue semper, pretium dui vitae, lacinia quam. Maecenas non nunc vel neque lacinia tristique vel ac enim. Quisque erat nisi, tempor at justo vitae, fringilla eleifend massa. Ut ut arcu sed ipsum euismod dictum. Sed quam nunc, suscipit a ex ac, dapibus laoreet justo. Praesent ut tincidunt risus. Donec vestibulum purus sit amet lacus malesuada, suscipit semper dolor volutpat. Vivamus eget vulputate nisl.
+			</TextBlock>
+			<TextBlock TextAlignment="Right" TextDecorations="Underline" Margin="0, 0, 0, 0">More</TextBlock>
+			<TextBlock TextAlignment="Right" Margin="0, 5, 0, 0"> Yesterday </TextBlock>
+
+			<TextBlock TextWrapping="Wrap">
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam dignissim justo sit amet sem interdum, id vulputate leo pretium. Aenean facilisis augue eget hendrerit tempus. Maecenas facilisis sagittis dictum. Etiam pharetra nibh sem, eget iaculis lorem euismod eget. Nam auctor tincidunt mi faucibus rutrum. Suspendisse lacinia ex a urna dignissim dignissim. Curabitur non augue semper, pretium dui vitae, lacinia quam. Maecenas non nunc vel neque lacinia tristique vel ac enim. Quisque erat nisi, tempor at justo vitae, fringilla eleifend massa. Ut ut arcu sed ipsum euismod dictum. Sed quam nunc, suscipit a ex ac, dapibus laoreet justo. Praesent ut tincidunt risus. Donec vestibulum purus sit amet lacus malesuada, suscipit semper dolor volutpat. Vivamus eget vulputate nisl.
+			</TextBlock>
+			<TextBlock TextAlignment="Right" TextDecorations="Underline" Margin="0, 0, 0, 0">More</TextBlock>
+			<TextBlock TextAlignment="Right" Margin="0, 5, 0, 0">1 week ago</TextBlock>
+
+		</StackPanel>
+
+		<DockPanel Grid.Row="2"
+				   Grid.Column="0"
+	 DockPanel.Dock="Bottom"
+				   Background="{StaticResource SecondaryColor}">
+
+			<TextBlock Padding="2,0" Foreground="{StaticResource Silver}"
+		 VerticalAlignment="Center"
+		 Margin="0,10,10,10">Tags:</TextBlock>
+			<TextBlock Padding="2,0" Foreground="{StaticResource Lavender}"
+		 VerticalAlignment="Center"
+		 Margin="0,10,8,10">Tag 1 Tag 2 Tag 3 Tag 4</TextBlock>
+
+			<StackPanel DockPanel.Dock="Right"
+		Orientation="Horizontal"
+			   HorizontalAlignment="Right"
+			   VerticalAlignment="Center">
+				<TextBlock Padding="2,0" Foreground="{StaticResource Cornsilk}"
+			 Margin="0,10,20,10">Rate this article</TextBlock>
+				<ComboBox Margin="0, 0, 0, 0" Padding="0" FontSize="14">
+					<ComboBoxItem>1</ComboBoxItem>
+					<ComboBoxItem>2</ComboBoxItem>
+					<ComboBoxItem>3</ComboBoxItem>
+					<ComboBoxItem>4</ComboBoxItem>
+					<ComboBoxItem>5</ComboBoxItem>
+				</ComboBox>
+			</StackPanel>
+		</DockPanel>
+	</Grid>
+
+</Window>
